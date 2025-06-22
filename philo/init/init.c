@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.h                                            :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rober <rober@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 16:28:59 by rober             #+#    #+#             */
-/*   Updated: 2025/06/20 13:44:21 by rober            ###   ########.fr       */
+/*   Created: 2025/06/20 13:56:49 by rober             #+#    #+#             */
+/*   Updated: 2025/06/20 15:25:05 by rober            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARSE_H
-# define PARSE_H
+#include "init.h"
 
-# include "../philosophers.h"
-# include "../aux/aux.h"
-
-int	parse(t_table *table, char *argv[]);
-
-#endif
+void	init(t_table *table)
+{
+	table->end_simulation = false;
+	table->philos = safe_malloc(table->philo_number);
+	
+	
+}

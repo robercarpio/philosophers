@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.h                                            :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rober <rober@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 16:28:59 by rober             #+#    #+#             */
-/*   Updated: 2025/06/20 13:44:21 by rober            ###   ########.fr       */
+/*   Created: 2025/06/20 12:28:18 by rober             #+#    #+#             */
+/*   Updated: 2025/06/20 13:42:40 by rober            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARSE_H
-# define PARSE_H
+#include "aux.h"
 
-# include "../philosophers.h"
-# include "../aux/aux.h"
+long	ft_atol(char *str)
+{
+	long	number;
+	
+	number = 0;
 
-int	parse(t_table *table, char *argv[]);
-
-#endif
+	str = valid_number(str);
+	while(is_digit(*str))
+		number = (number * 10) + (*str++ -48);
+	if (number > INT_MAX)
+		error_exit("Error: value is too big");
+	return (number);
+}

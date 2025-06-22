@@ -6,12 +6,12 @@
 /*   By: rober <rober@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 15:08:20 by rober             #+#    #+#             */
-/*   Updated: 2025/06/18 16:35:45 by rober            ###   ########.fr       */
+/*   Updated: 2025/06/20 13:55:13 by rober            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosophers.h"
-
+#include "parse/parse.h"
 int	main(int argc, char *argv[])
 {
 	(void) argv;
@@ -19,8 +19,7 @@ int	main(int argc, char *argv[])
 	{
 		t_table	table;
 		(void) table;
-		//parse
-		// parse(&table,argv);
+		parse(&table,argv);
 
 		//init
 		//init(&table)

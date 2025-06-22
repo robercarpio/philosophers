@@ -6,7 +6,7 @@
 /*   By: rober <rober@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 14:53:30 by rober             #+#    #+#             */
-/*   Updated: 2025/06/18 16:17:47 by rober            ###   ########.fr       */
+/*   Updated: 2025/06/20 15:43:03 by rober            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,17 @@
 # define B		"\033[1;34m"
 # define G		"\033[1;32m"
 # define Y		"\033[1;33m"
+
+typedef enum e_opcode
+{
+	LOCK,
+	UNLOCK,
+	INIT,
+	DESTROY,
+	CREATE,
+	JOIN,
+	DETACH,
+}	t_opcode;
 
 struct	s_table;
 

@@ -6,12 +6,20 @@
 #    By: rober <rober@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/18 16:18:53 by rober             #+#    #+#              #
-#    Updated: 2025/06/18 16:21:32 by rober            ###   ########.fr        #
+#    Updated: 2025/06/18 17:09:18 by rober            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS =	main.c \
 		utils.c \
+		aux/ft_bzero.c \
+		aux/ft_calloc.c \
+		aux/ft_memcpy.c \
+		aux/ft_split.c \
+		aux/ft_strdup.c \
+		aux/ft_strlcpy.c \
+		aux/ft_strlen.c \
+		aux/ft_substr.c \
 
 NAME = philosophers
 CC = cc

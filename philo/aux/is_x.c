@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.h                                            :+:      :+:    :+:   */
+/*   is_x.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rober <rober@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 16:28:59 by rober             #+#    #+#             */
-/*   Updated: 2025/06/20 13:44:21 by rober            ###   ########.fr       */
+/*   Created: 2025/06/20 13:26:54 by rober             #+#    #+#             */
+/*   Updated: 2025/06/20 13:27:27 by rober            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARSE_H
-# define PARSE_H
+#include "aux.h"
 
-# include "../philosophers.h"
-# include "../aux/aux.h"
+bool is_space(char c)
+{
+	return ((c >= 9 && c <= 13) || (c == 32));
+}
 
-int	parse(t_table *table, char *argv[]);
-
-#endif
+bool is_digit(char c)
+{
+	return (c >= 48 && c <= 57);
+}

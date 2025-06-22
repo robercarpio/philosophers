@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   parse.h                                            :+:      :+:    :+:   */
+/*   init.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rober <rober@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 16:28:59 by rober             #+#    #+#             */
-/*   Updated: 2025/06/20 13:44:21 by rober            ###   ########.fr       */
+/*   Created: 2025/06/20 13:55:50 by rober             #+#    #+#             */
+/*   Updated: 2025/06/20 15:16:17 by rober            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PARSE_H
-# define PARSE_H
+#ifndef INIT_H
+# define INIT_H
 
 # include "../philosophers.h"
-# include "../aux/aux.h"
-
-int	parse(t_table *table, char *argv[]);
+#include "../aux/aux.h"
 
 #endif
