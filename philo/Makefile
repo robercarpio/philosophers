@@ -3,15 +3,21 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: rober <rober@student.42.fr>                +#+  +:+       +#+         #
+#    By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/18 16:18:53 by rober             #+#    #+#              #
-#    Updated: 2025/06/18 17:09:18 by rober            ###   ########.fr        #
+#    Updated: 2025/08/19 20:06:53 by rcarpio-cye      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+NAME = philosophers
+
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
 SRCS =	main.c \
 		utils.c \
+		aux/ft_atol.c \
 		aux/ft_bzero.c \
 		aux/ft_calloc.c \
 		aux/ft_memcpy.c \
@@ -20,15 +26,23 @@ SRCS =	main.c \
 		aux/ft_strlcpy.c \
 		aux/ft_strlen.c \
 		aux/ft_substr.c \
+		aux/getters_setters.c \
+		aux/is_x.c \
+		aux/safe_functions.c \
+		aux/valid_number.c \
+		dinner/dinner.c \
+		dinner/sync_utils.c \
+		dinner/write.c \
+		init/init.c \
+		parse/parse.c \
+		monitor/monitor.c \
 
-NAME = philosophers
-CC = cc
-CFLAGS = -Wall -Wextra -Werror
 OBJS = $(SRCS:.c=.o)
-INCLUDES = philosophers.h
+
+INCLUDES = philosophers.h aux/aux.h dinner/dinner.h init/init.h parse/parse.h
 
 all: $(NAME)
-	@echo "OK"
+
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 	@echo "compilation completed"
@@ -46,4 +60,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: all clean fclean re

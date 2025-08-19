@@ -1,0 +1,11 @@
+{
+	"files.associations": {
+		"aux.h": "c",
+		"init.h": "c",
+		"dinner.h": "c",
+		"philosophers.h": "c",
+		"errno.h": "c",
+		"parse.h": "c",
+		"monitor.h": "c"
+	}
+}

@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   init.h                                             :+:      :+:    :+:   */
+/*   monitor.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/20 13:55:50 by rober             #+#    #+#             */
-/*   Updated: 2025/07/30 18:47:34 by rcarpio-cye      ###   ########.fr       */
+/*   Created: 2025/08/19 19:15:21 by rcarpio-cye       #+#    #+#             */
+/*   Updated: 2025/08/19 20:06:26 by rcarpio-cye      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef INIT_H
-# define INIT_H
-
+#ifndef MONITOR_H
+# define MONITOR_H
 # include "../philosophers.h"
-#include "../aux/aux.h"
+#include "../dinner/dinner.h"
 
-void	init(t_table *table);
+void	*monitor_dinner(void *data);
 
 #endif
