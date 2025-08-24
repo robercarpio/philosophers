@@ -6,12 +6,12 @@
 /*   By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 14:53:30 by rober             #+#    #+#             */
-/*   Updated: 2025/08/19 22:45:54 by rcarpio-cye      ###   ########.fr       */
+/*   Updated: 2025/08/24 16:03:24 by rcarpio-cye      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHILOSOPHERS_H
-#define PHILOSOPHERS_H
+# define PHILOSOPHERS_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -20,12 +20,9 @@
 # include <sys/time.h>
 # include <limits.h>
 # include <pthread.h>
-#include <errno.h>
-#include <unistd.h>
+# include <errno.h>
+# include <unistd.h>
 
-// to use printf
-// printf(R "this is a red text" RST);
-// printf(B "this is a blue text" RST);
 # define W		"\033[37m" 
 # define C		"\033[36m"
 # define RST	"\033[0m"
@@ -34,8 +31,7 @@
 # define G		"\033[1;32m"
 # define Y		"\033[1;33m"
 
-// write function
-#define DEBUG_MODE 1
+# define DEBUG_MODE 0
 
 typedef enum e_opcode
 {
@@ -48,14 +44,14 @@ typedef enum e_opcode
 	DETACH,
 }	t_opcode;
 
-typedef enum	e_time_code
+typedef enum e_time_code
 {
 	SECOND,
 	MILLISECOND,
 	MICROSECOND
 }	t_time_code;
 
-typedef enum	e_status
+typedef enum e_status
 {
 	EATING,
 	SLEEPING,
@@ -67,13 +63,13 @@ typedef enum	e_status
 
 struct	s_table;
 
-typedef struct	s_fork
+typedef struct s_fork
 {
 	pthread_mutex_t	fork;
 	int				id;
 }	t_fork;
 
-typedef struct	s_philo
+typedef struct s_philo
 {
 	int				id;
 	t_fork			*right_f;	//firts fork
@@ -84,16 +80,9 @@ typedef struct	s_philo
 	pthread_t		thread_id;
 	pthread_mutex_t	mutex_philo;
 	struct s_table	*table;
-	
 }	t_philo;
 
-// typedef struct	s_fork
-// {
-// 	pthread_mutex_t	fork;
-// 	int				id;
-// }	t_fork;
-
-typedef struct	s_table
+typedef struct s_table
 {
 	long			philo_number;
 	long			tt_die;

@@ -6,15 +6,13 @@
 #    By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/18 16:18:53 by rober             #+#    #+#              #
-#    Updated: 2025/08/19 20:06:53 by rcarpio-cye      ###   ########.fr        #
+#    Updated: 2025/08/24 15:56:41 by rcarpio-cye      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = philosophers
-
+NAME = philo
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-
 SRCS =	main.c \
 		utils.c \
 		aux/ft_atol.c \

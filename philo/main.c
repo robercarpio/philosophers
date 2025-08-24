@@ -6,7 +6,7 @@
 /*   By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 15:08:20 by rober             #+#    #+#             */
-/*   Updated: 2025/08/19 21:41:05 by rcarpio-cye      ###   ########.fr       */
+/*   Updated: 2025/08/24 15:45:52 by rcarpio-cye      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,15 @@
 
 int	main(int argc, char *argv[])
 {
+	t_table	table;
+
 	if (argc == 5 || argc == 6)
 	{
-		t_table table;
 		parse(&table, argv);
 		printf(G "Iniciando simulación de filósofos...\n" RST);
 		init(&table);
-		dinner(&table); // Ejecuta la simulación
-		clean(&table); // Si tienes función de limpieza, descomenta
+		dinner(&table);
+		clean(&table);
 	}
 	else
 		error_exit("Wrong format input\n"

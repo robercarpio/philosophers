@@ -6,7 +6,7 @@
 /*   By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 13:55:50 by rober             #+#    #+#             */
-/*   Updated: 2025/07/30 18:47:34 by rcarpio-cye      ###   ########.fr       */
+/*   Updated: 2025/08/24 17:05:57 by rcarpio-cye      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define INIT_H
 
 # include "../philosophers.h"
-#include "../aux/aux.h"
+# include "../aux/aux.h"
 
 void	init(t_table *table);
 

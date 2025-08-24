@@ -3,21 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   is_x.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rober <rober@student.42.fr>                +#+  +:+       +#+        */
+/*   By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 13:26:54 by rober             #+#    #+#             */
-/*   Updated: 2025/06/20 13:27:27 by rober            ###   ########.fr       */
+/*   Updated: 2025/08/24 16:20:52 by rcarpio-cye      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "aux.h"
 
-bool is_space(char c)
+bool	is_space(char c)
 {
 	return ((c >= 9 && c <= 13) || (c == 32));
 }
 
-bool is_digit(char c)
+bool	is_digit(char c)
 {
 	return (c >= 48 && c <= 57);
 }

@@ -6,7 +6,7 @@
 /*   By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 12:35:46 by rober             #+#    #+#             */
-/*   Updated: 2025/08/19 22:16:55 by rcarpio-cye      ###   ########.fr       */
+/*   Updated: 2025/08/24 16:42:34 by rcarpio-cye      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*valid_number(char *str)
 	number = str;
 	while (is_digit(*str++))
 		len++;
-	if(len > 14)
+	if (len > 18)
 		error_exit("Error: value is too big");
 	return (number);
 }

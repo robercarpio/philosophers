@@ -6,7 +6,7 @@
 /*   By: rcarpio-cyepes <rcarpio-cyepes@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 16:23:59 by rober             #+#    #+#             */
-/*   Updated: 2025/08/03 17:11:43 by rcarpio-cye      ###   ########.fr       */
+/*   Updated: 2025/08/24 17:09:55 by rcarpio-cye      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ int	parse(t_table *table, char *argv[])
 		table->nbr_limit_meals = ft_atol(argv[5]);
 	else
 		table->nbr_limit_meals = -1;
-
 	return (0);
 }
